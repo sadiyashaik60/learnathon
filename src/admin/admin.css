@@ -1,0 +1,252 @@
+/* admin.css
+
+form {
+    margin: auto;
+    width: 300px;
+    text-align: center; 
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-align: center; 
+  }
+  
+  input[type='text'],
+  input[type='password'],
+  input[type='number'],
+  input[type='email'],
+  select,
+  input[type='date'],
+  textarea {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button[type='submit'] {
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button[type='submit']:hover {
+    background-color: #555;
+  }
+   */
+
+   * {
+    padding: 0;
+    margin: 0;
+  }
+  // Developed by http://grohit.com/
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 100vh;
+    font-family: Hack, monospace;
+  }
+  
+  div {
+    color: #727272;
+    text-align: center;
+  }
+  
+  p {
+    margin: 16px;
+    font-size: 40px;
+    color: #999494;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 1s ease-in-out;
+    position: relative;
+  
+    &::before {
+      content: attr(data-item);
+      transition: all 1s ease-in-out;
+      color: #FFB100;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 0;
+      overflow: hidden;
+    }
+  
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+  
+  nav {
+    margin: 0px;
+    background: #F0ECCf;
+    padding: 4px;
+    .menuItems {
+      list-style: none;
+      display: flex;
+  
+      li {
+        margin: 7px;
+  
+        a {
+          text-decoration: none;
+          color: #FFB100;
+          font-size: 20px;
+          font-weight: 500;
+          transition: all 0.5s ease-in-out;
+          position: relative;
+          text-transform: uppercase;
+  
+          &::before {
+            content: attr(data-item);
+            transition: 0.5s;
+            color: #8254ff;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 0;
+            overflow: hidden;
+          }
+  
+          &:hover {
+            &::before {
+              width: 100%;
+              transition: all 0.5s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+table {
+	width: 800px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #111010;
+}
+
+th {
+	text-align: center;
+}
+
+thead {
+	th {
+		background-color: #F0ECCf;
+	}
+}
+
+tbody {
+	tr {
+		&:hover {
+			background-color: rgba(29, 24, 24, 0.3);
+		}
+	}
+	td {
+		position: relative;
+		&:hover {
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: -9999px;
+				bottom: -9999px;
+				background-color: rgba(179, 42, 42, 0.2);
+				z-index: -1;
+			}
+		}
+	}
+}
+
+.formcontainer {
+  background-color: #F0ECCF;
+  padding: 20px;
+  margin: 20px auto; /* Add margin to the top to create space outside */
+  max-width: 400px; /* Adjust the maximum width of the form container */
+}
+
+.form-row {
+  margin-bottom: 20px;
+}
+
+.input-data input,
+.input-data textarea {
+  width: calc(100% - 20px); /* Adjust the width of input fields */
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  margin-bottom: 10px; /* Add space between input field and underline */
+}
+
+.input-data label {
+  color: #FFB100;
+}
+
+.input-data textarea {
+  resize: vertical;
+}
+
+.input-data .underline {
+  width: calc(100% - 20px); /* Adjust the length of the underline */
+  height: 2px;
+  background-color: #FFB100;
+  margin-bottom: 10px; /* Add space between underline and input field */
+}
+
+.submit-btn input[type="submit"] {
+  background-color: #FFB100;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.submit-btn input[type="submit"]:hover {
+  background-color: #FFB100;
+}
